@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Mask with Video</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/video.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay">
+    <div class="side-text left">We`re here<br>healthy<br>so you can<br>and happier</div>
+
+    <svg class="mask-layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <mask id="rect-mask" x="0" y="0" width="100%" height="100%">
+          <rect width="100%" height="100%" fill="white" />
+          <rect x="36" y="12" width="37.5" height="12" fill="black" />
+          <rect x="24.5" y="34" width="27" height="12" fill="black" />
+          <rect x="34.5" y="56" width="32.5" height="12" fill="black" />
+          <rect x="38" y="78" width="61" height="12" fill="black" />
+        </mask>
+      </defs>
+      <rect width="100%" height="100%" fill="black" mask="url(#rect-mask)" />
+    </svg>
+
+    <div class="side-text right">to make<br>living effortless,<br>live longer</div>
+</div>
+<div class="background"></div>
+</body>
+</html>
